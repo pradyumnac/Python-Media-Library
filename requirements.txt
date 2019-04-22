@@ -1,0 +1,6 @@
+mopidy
+eyed3
+beets
+pillow
+argparse
+glob3
