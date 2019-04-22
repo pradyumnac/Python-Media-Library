@@ -6,6 +6,11 @@ import argparse
 from helper import verify_exists
 from helper import IMAGE_FILES, MUSIC_FILES, VIDEO_FILES, EBOOK_FILES
 
+def get_album_art_tt(filepath):
+    tag = TinyTag.get(filepath, image=True)
+    image_data = tag.get_image()
+    return image
+
 def get_id3_tags_tt(filepath, tag_name = 'all'):
     # tinytag version
     tags = {}
